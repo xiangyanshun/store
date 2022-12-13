@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/store
+    username: root
+    password: 123456
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: isDelete
+      logic-not-delete-value: 0
+      logic-delete-value: 1
+  mapper-locations: classpath:mapper/*.xml
