@@ -45,4 +45,9 @@ public class UserController extends ExceptionController{
         userService.reg(user);
         return new JsonResult<>(OK);
     }
+    @RequestMapping("login")
+    public JsonResult<User> login(String username , String password){
+        User data = userService.login(username, password);
+        return new JsonResult<>(OK,data);
+    }
 }
